@@ -1,55 +1,200 @@
 <template>
-  <nav class="cont-nav">
-    <ul class="cont-ul">
-      <li><router-link class="router" to="/Price">가격표</router-link></li>
-      <li><router-link class="router" to="/">Home</router-link></li>
-      <li><router-link class="router" to="/Appointment">예약</router-link></li>
-      <li><router-link class="router" to="/Visit">찾아오시는길</router-link></li>
-      <div>
-        <li class="cont-join">로그인</li>
-        <li class="cont-user">회원가입</li>
-      </div>
-    </ul>
+  <nav class="sidebar">
+    <div class="sidebar-inner">
+      <header class="sidebar-header">
+        <button
+          type="button"
+          class="sidebar-btn"
+          @click="toggleSidebar()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <img
+          src="../img/logo.jpg"
+          alt=""
+          class="sidebar-logo" />
+      </header>
+
+      <nav class="sidebar-menu">
+        <button type="button">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-user"></i>
+          <span>Accounts</span>
+        </button>
+        <button
+          type="button"
+          class="has-border">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-cubes"></i>
+          <span>Blockchain</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-database"></i>
+          <span>Databases</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-circle-play"></i>
+          <span>AudioVibe</span>
+        </button>
+        <button
+          type="button"
+          class="has-border">
+          <i class="fa-solid fa-headset"></i>
+          <span>Soundblast</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-folder"></i>
+          <span>Folders</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Levels</span>
+        </button>
+        <button type="button">
+          <i class="fa-solid fa-lock"></i>
+          <span>Security</span>
+        </button>
+      </nav>
+    </div>
   </nav>
 </template>
 
 <script setup>
-
+const toggleSidebar = () => {
+  document.body.classList.toggle('open')
+}
 </script>
 
 <style scoped>
-.router {
-  text-decoration: none;
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+* {
+  box-sizing: border-box;
 }
-.cont-nav{
-  background-color: black;
+
+body {
+  margin: 0;
+  background-color: black ;
 }
-.cont-ul {
-  list-style: none;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  width: 1040px;
-  height: 100px;
-  margin: 0 auto;
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
   top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  background: #3949ab;
+  transition: all 0.4s;
 }
 
-.cont-join {
-  list-style: none;
-  display: flex;
-  padding-right: 20px;
-  margin-bottom: 20px;
-  color: #eee;
-  text-align: center;
+body.open .sidebar {
+  width: 240px;
 }
 
-.cont-user {
-  list-style: none;
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.sidebar-header {
   display: flex;
-  color: #eee;
-  text-align: center;
+  align-items: center;
+  height: 68px;
+  padding: 0 1.25rem 0 0;
+  background: rgba(0 0 0 0.1);
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+.sidebar-header:hover {
+  border-left: 3px solid #bdbdbd;
+}
+
+.sidebar-btn {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+}
+
+.sidebar-btn > i, body.open .sidebar-btn > i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+.sidebar-btn:hover > i, body.open .sidebar-btn:hover > i {
+  color: #bdbdbd;
+}
+
+.sidebar-logo {
+  width: 130px;
+  height: 70px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+body.open .sidebar-logo {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.sidebar-menu {
+  display: grid;
+}
+.sidebar-menu > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 55px;
+  font-family: "Unbuntu";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 22px;
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+.sidebar-menu > button:hover {
+  border-left: 3px solid #f9f9f9;
+}
+
+.sidebar-menu > button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu > button > i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover > i, .sidebar-menu > button:hover > span {
+  color: #bdbdbd;
+}
+.sidebar-menu > button > span {
+  color: #f9f9f9;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+body.open .sidebar-menu > button > span {
+  opacity: 1;
+  transition: all 0.4s;
 }
 </style>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>안녕하세요</p>
+  <dir />
 </template>
 
 <style scoped>
