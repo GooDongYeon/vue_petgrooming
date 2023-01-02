@@ -43,6 +43,8 @@ const frm = ref(null)
 const id = ref(null)
 const pass = ref(null)
 
+
+// validation
 function login() {
   if (id.value.value == '') {
     alert('아이디을 입력하세요')
