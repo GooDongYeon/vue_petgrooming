@@ -48,14 +48,14 @@
           to="/"
           class="routerlink-btn">
           <button type="button">
-            <i class="fa-solid fa-house"></i>
-            <span>HOME</span>
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
           </button>
         </router-link>
       </nav>
     </div>
   </nav>
-</template>
+</template> 
 
 <script setup>
 const toggleSidebar = () => {
@@ -91,7 +91,7 @@ button {
   width: 75px;
   height: 100%;
   background: #3949ab;
-  transition: all 0.4s;
+  
 }
 
 body.open .sidebar {
