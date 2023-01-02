@@ -9,5 +9,6 @@
 <style scoped>
   p {
     background-color: pink;
+    margin: 0 auto;
   }
 </style>

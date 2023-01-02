@@ -1,5 +1,7 @@
 <template>
-  <div>가격</div>
+  <div class="pr">
+    가격
+  </div>
 </template>
 
 <script setup>
@@ -7,7 +9,5 @@
 </script>
 
 <style scoped>
- div {
-  background-color: lightblue;
- }
+
 </style>

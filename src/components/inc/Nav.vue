@@ -41,6 +41,17 @@
             Visit
           </router-link>
         </button>
+
+
+        <!-- modify -->
+        <router-link
+          to="/"
+          class="routerlink-btn">
+          <button type="button">
+            <i class="fa-solid fa-house"></i>
+            <span>HOME</span>
+          </button>
+        </router-link>
       </nav>
     </div>
   </nav>
@@ -58,6 +69,7 @@ const toggleSidebar = () => {
   box-sizing: border-box;
 }
 
+/* initialization css */
 body {
   margin: 0;
   background-color: black ;
@@ -70,6 +82,7 @@ button {
   cursor: pointer;
 }
 
+/* sidebar css */
 .sidebar {
   position: absolute;
   overflow: hidden;
@@ -150,9 +163,10 @@ body.open .sidebar-logo {
   border-left: 3px solid transparent;
   transition: all 0.4s;
 }
-.sidebar-menu > button:hover {
-  border-left: 3px solid #f9f9f9;
-}
+
+  .sidebar-menu > button:hover {
+    border-left: 3px solid #f9f9f9;
+  }
 
 .sidebar-menu > button.has-border {
   padding-bottom: 1rem;
@@ -180,7 +194,55 @@ body.open .sidebar-menu > button > .routerlink {
   transition: all 0.4s;
 }
 
-.routerlink {
+
+
+/* modify */
+.routerlink-btn {
   text-decoration: none;
 }
+.sidebar-menu > .routerlink-btn > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 55px;
+  font-family: "Unbuntu";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 22px;
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+  .sidebar-menu > .routerlink-btn > button:hover {
+    border-left: 3px solid #f9f9f9;
+  }
+
+.sidebar-menu > .routerlink-btn > button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu > .routerlink-btn > button > i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > .routerlink-btn > button:hover > i, .sidebar-menu > .routerlink-btn > button:hover > span {
+  color: #bdbdbd;
+}
+.sidebar-menu > .routerlink-btn > button > span {
+  color: #f9f9f9;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+body.open .sidebar-menu > .routerlink-btn > button > span {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
 </style>
