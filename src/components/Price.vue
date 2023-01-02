@@ -7,5 +7,7 @@
 </script>
 
 <style scoped>
-
+  p {
+    background-color: pink;
+  }
 </style>

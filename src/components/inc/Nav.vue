@@ -17,47 +17,29 @@
       <nav class="sidebar-menu">
         <button type="button">
           <i class="fa-solid fa-house"></i>
-          <span>Home</span>
+          <router-link
+            to="/"
+            class="routerlink">
+            Home
+          </router-link>
         </button>
         <button type="button">
           <i class="fa-solid fa-user"></i>
-          <span>Accounts</span>
+          <router-link
+            to="/Price"
+            class="routerlink">
+            Price
+          </router-link>
         </button>
         <button
           type="button"
           class="has-border">
           <i class="fa-solid fa-gear"></i>
-          <span>Settings</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-cubes"></i>
-          <span>Blockchain</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-database"></i>
-          <span>Databases</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-circle-play"></i>
-          <span>AudioVibe</span>
-        </button>
-        <button
-          type="button"
-          class="has-border">
-          <i class="fa-solid fa-headset"></i>
-          <span>Soundblast</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-folder"></i>
-          <span>Folders</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-layer-group"></i>
-          <span>Levels</span>
-        </button>
-        <button type="button">
-          <i class="fa-solid fa-lock"></i>
-          <span>Security</span>
+          <router-link
+            to="/Visit"
+            class="routerlink">
+            Visit
+          </router-link>
         </button>
       </nav>
     </div>
@@ -184,17 +166,21 @@ body.open .sidebar-logo {
   transition: all 0.4s;
 }
 
-.sidebar-menu > button:hover > i, .sidebar-menu > button:hover > span {
+.sidebar-menu > button:hover > i, .sidebar-menu > button:hover > .routerlink {
   color: #bdbdbd;
 }
-.sidebar-menu > button > span {
+.sidebar-menu > button > .routerlink {
   color: #f9f9f9;
   opacity: 0;
   transition: all 0.4s;
 }
 
-body.open .sidebar-menu > button > span {
+body.open .sidebar-menu > button > .routerlink {
   opacity: 1;
   transition: all 0.4s;
+}
+
+.routerlink {
+  text-decoration: none;
 }
 </style>
