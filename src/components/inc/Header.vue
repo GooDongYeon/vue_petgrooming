@@ -48,6 +48,8 @@ button {
 /* top-bar css */
 .top-bar {
   padding-left: 70px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
 .top-bar>button {

@@ -1,13 +1,19 @@
+<script setup>
+import Header from './inc/Header.vue'
+import Nav from './inc/Nav.vue'
+</script>
+
 <template>
-  <div class="pr">
-    가격
+  <Header />
+  <Nav />
+  <div id="wrap">
+    <div class="content"></div>
+    <footer id="footer"></footer>
   </div>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
 
+  #wrap {display:flex; min-height:100vh; flex-direction:column;}
+  .content {flex:1;}
 </style>

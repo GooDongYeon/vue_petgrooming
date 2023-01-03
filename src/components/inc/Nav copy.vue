@@ -79,3 +79,51 @@
   text-align: center;
 }
 </style>
+
+<!-- .sidebar-menu {
+  display: grid;
+}
+.sidebar-menu > button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 55px;
+  font-family: "Unbuntu";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 22px;
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+  .sidebar-menu > button:hover {
+    border-left: 3px solid #f9f9f9;
+  }
+
+.sidebar-menu > button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu > button > i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+
+.sidebar-menu > button:hover > i, .sidebar-menu > button:hover > .routerlink {
+  color: #bdbdbd;
+}
+.sidebar-menu > button > .routerlink {
+  color: #f9f9f9;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+body.open .sidebar-menu > button > .routerlink {
+  opacity: 1;
+  transition: all 0.4s;
+} -->
