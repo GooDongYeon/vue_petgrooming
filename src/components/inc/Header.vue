@@ -38,13 +38,6 @@ button {
   cursor: pointer;
 }
 
-button {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
 /* top-bar css */
 .top-bar {
   padding-left: 70px;
