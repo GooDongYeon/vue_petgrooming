@@ -53,14 +53,18 @@ import Nav from './inc/Nav.vue'
     </div>
   </div>
 
-  <div id="wrap">
-    <div class="content"></div>
-    <footer id="footer"></footer>
+  <div class="footer">
+    <div class="footer_wrap">
+      <div class="footer_text">
+        <p>Email : rnehddus93@gmail.com</p>
+        <p>Github : https://github.com/GooDongYeon</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-#wrap {
+/* #wrap {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -68,7 +72,7 @@ import Nav from './inc/Nav.vue'
 
 .content {
   flex: 1;
-}
+} */
 
 .container {
   padding-left: 80px;
@@ -96,5 +100,28 @@ import Nav from './inc/Nav.vue'
   height: 200px;
   box-shadow: 3px 3px 3px #eee;
   padding-left: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  background: #1B1B1E;
+ }
+ .footer .footer_wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.footer .footer_text {
+  color: white;
+  text-align: center;
+  margin-top: 12px;
+}
+.footer .footer_text p {
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 </style>

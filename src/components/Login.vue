@@ -19,7 +19,8 @@
       </p>
       <button
         id="login"
-        required>
+        required
+        @click.prevent="login">
         로그인
       </button><br />
       <a class="join">회원가입</a><a class="find">아이디/비밀번호 찾기</a>
