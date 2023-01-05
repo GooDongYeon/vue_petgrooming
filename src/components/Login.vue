@@ -1,39 +1,55 @@
 <!-- login page -->
 <template>
-  <section class="signin">
-    <div class="signin_card">
-      <form
-        ref="frm"
-        action="/"
-        metgod="get"
-        class="frm">
-        <input
-          id="id"
-          ref="id"
-          type="text"
-          name="id"
-          placeholder="아이디를 입력하세요." />
-        <input
-          id="pass"
-          ref="pass"
-          type="password"
-          name="pass"
-          placeholder="비밀번호를 입력하세요." />
-        <button
-          ref="btn-login"
-          type="submit"
-          class="btn"
-          @click.prevent="login">
-          로그인
-        </button>
-      </form>
-      <div class="actions">
-        <a href="http://localhost:8080/?#/join">회원가입</a>
-        <a href="#">아이디 찾기</a>
-        <a href="#">비밀번호 찾기</a>
-      </div>
+  <main>
+    <h2><strong>로그인 또는 회원가입</strong></h2>
+    <hr />
+    <form>
+      <Input
+        id="id"
+        type="email"
+        placeholder=" 아이디"
+        required /><br />
+      <Input
+        id="pw"
+        type="password"
+        placeholder="비밀번호"
+        required /><br />
+      <p class="keep">
+        로그인 상태 유지
+      </p>
+      <button
+        id="login"
+        required>
+        로그인
+      </button><br />
+      <a class="join">회원가입</a><a class="find">아이디/비밀번호 찾기</a>
+    </form>
+    <hr /><div class="or">
+      또는
     </div>
-  </section>
+    <section>
+      <button id="google">
+        <img
+          src="loginpage/Google.png"
+          alt="" />구글 계정으로 로그인
+      </button><br />
+      <button id="facebook">
+        <img
+          src="loginpage/facebook.png"
+          alt="" />페이스북 계정으로 로그인
+      </button><br />
+      <button id="naver">
+        <img
+          src="loginpage/naver.png"
+          alt="" />네이버 계정으로 로그인
+      </button><br />
+      <button id="kakao">
+        <img
+          src="loginpage/kakao.png"
+          alt="" />카카오톡 계정으로 로그인
+      </button>
+    </section>
+  </main>
 </template>
 
 <script setup>
@@ -60,68 +76,142 @@ function login() {
 </script>
 
 <style scoped>
-.signin {
-  margin-top: 5px;
-  padding: 20px 0 30px;
-}
+        main {
+            position: relative;
+            border: 1px solid #767676;
+            width: 530px;
+            height: 750px;
+            text-align: center;
+            left: 35%;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 16px;
+            Line-height: 20.03px;
+            margin-top: 20px;
+            margin-bottom: 18px;
+        }
 
-.signin_card {
-  width: 500px;
-  margin: 0 auto;
-  border-radius: 6px;
-  background-color: white;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  color: #555;
-}
+        h2::after {
+            display: inline-block;
+            content: "";
+            background-image: url("loginpage/close.png");
+            width: 16px;
+            height: 16px;
+            position: relative;
+            left: 148px;
+            cursor: pointer;
+        }
+        
+        h1 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 26px;
+            position: relative;
+            right: 32px;
+            margin-bottom: 24px;
+        }
 
-.signin_card form {
-  padding: 30px 22px;
-}
+        p {
+            color: #767676;
+        }
+        input {
+            width: 450px;
+            height: 44px;
+            margin-top: 10px;
+            padding: 15px auto;
+            padding-left: 16px;
+        }
 
-.signin_card form input {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  outline: none;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+        .keep {
+            position: relative;
+            right: 155px;
+        }
 
-.signin_card form button {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  outline: none;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+        .keep::before {
+            display: inline-block;
+            content: "";
+            width: 22px;
+            height: 22px;
+            position: relative;
+            top: 5px;
+            right: 8px;
+            background-image: url("loginpage/check-box.png");
+            cursor: pointer;
+        }
 
-.signin_card .actions {
-  display: flex;
-  border-top: 1px solid #ddd;
-}
+        #login {
+            width: 472px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            background-color: #2f80ed;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
 
-.signin_card .actions a {
-  flex-grow: 1;
-  flex-basis: 0;
-  text-align: center;
-  padding: 20px;
-  color: #555;
-  font-size: 14px;
-  border-right: 1px solid #ddd;
-  text-decoration: none;
-}
+        section #google, #facebook, #naver, #kakao{
+            width: 472px;
+            height: 50px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: white;
+            font-weight: 500;
+            line-height: 20.03px;
+            border-radius: 5px;
+            padding-top: 13px;
+        }
 
-.signin_card .actions a:hover {
-  background-color: black;
-  color: white;
-}
+        #google {
+            border: 1px solid #767676;
+            margin-top: 29px;
+        }
+        #facebook {
+            border: 1px solid #2d9cdb;
+        }
+        #naver {
+            border: 1px solid #00bf18;
+        }
+        #kakao {
+            border: 1px solid #f2c94c;
+        }
 
-.signin_card .actions a:last-child {
-  border-right: none;
-}
+        button img {
+            float: left;
+            position: relative;
+            left: 15px;
+            bottom: 7px;
+        }
+
+        .or {
+            position: relative;
+            border: 1px none;
+            width: 64px;
+            height: 18px;
+            background-color: white;
+            color: #767676;
+            bottom: 20px;
+            left: 230px;
+        }
+
+        .join {
+            border-right: 1px solid #767676;
+            padding-right: 12px;
+        }
+
+        .find {
+            padding-left: 12px;
+        }
+
+        a {
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 38px;
+            color: #767676
+        }
+
 </style>
